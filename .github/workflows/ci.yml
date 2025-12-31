@@ -54,11 +54,8 @@ jobs:
         env:
           MY_SECRET_1: ${{secrets.SPRING_BOOT_PROJECT}}
           MY_SECRET_2: ${{secrets.SPRING_BOOT}}
-
-      - name: print variables
-        run:
-          echo ${{LOGIN.Great Welcome}}
-          echo "Number of chances are ${{CHANCE.only 5 chances}}"
+          MY_VARIABLE_1: echo ${{LOGIN.Great Welcome}}
+          MY_VARIABLE_2: echo "Number of chances are ${{CHANCE.only 5 chances}}"
 
 
 
