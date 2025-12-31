@@ -32,7 +32,7 @@ jobs:
       - name: unit test
         run: mvn clean test
 
-      - name: integratio test
+      - name: integration test
         run: mvn clean verify
 
 
@@ -47,5 +47,18 @@ jobs:
         with:
           name: jacoco-coverage-report
           path: target/site/jacoco
+
+      - name: use secrets
+        run:
+          echo "project name is ${{ secrets.SPRING_BOOT_PROJECT }}"
+        env:
+          MY_SECRET_1: ${{secrets.SPRING_BOOT_PROJECT}}
+          MY_SECRET_2: ${{secrets.SPRING_BOOT}}
+
+      - name: print variables
+        run:
+          echo "${{LOGIN.Great Welcome}}"
+          echo "Number of chances are ${{CHANCE.only 5 chances}}"
+
 
 
