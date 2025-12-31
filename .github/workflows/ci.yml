@@ -57,7 +57,7 @@ jobs:
 
       - name: print variables
         run:
-          echo "${{LOGIN.Great Welcome}}"
+          echo ${{LOGIN.Great Welcome}}
           echo "Number of chances are ${{CHANCE.only 5 chances}}"
 
 
