@@ -50,7 +50,7 @@ jobs:
 
       - name: use secret
         run:
-          echo "Username is ${{ secrets.SPRING_BOOT }}"
+          echo "Project name is ${{ secrets.SPRING_BOOT }}"
         env:
           DB_PASSWORD: ${{ secrets.SPRING_BOOT }}
 
