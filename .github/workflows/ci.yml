@@ -49,7 +49,11 @@ jobs:
           path: target/site/jacoco
 
       - name: use secrets
-        run: mvn test
+        run: |
+          echo "Project name is $MY_SECRET_1"
+          echo "short name is $MY_SECRET_2"
+          echo "login greeting MY_VARIABLE_1"
+          echo "login greeting MY_VARIABLE_2"
         env:
           MY_SECRET_1: ${{secrets.SPRING_BOOT_PROJECT}}
           MY_SECRET_2: ${{secrets.SPRING_BOOT}}
