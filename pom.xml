@@ -2,33 +2,50 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.example</groupId>
 	<artifactId>sample-java-assignment-app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
 	<name>sample-java-assignment-app</name>
 	<description>Java Assignment projects to Learn</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
-	<properties>
+
+    <url>https://github.com/XcelevatorCharumathi/DevSecOps_Assignment.git</url>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>charu</id>
+            <name>Charumathi R</name>
+            <email>charumathi.2507@xcelevate.org.noreply.github.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:https://github.com/your-username/your-repo-name.git</connection>
+        <developerConnection>scm:git:ssh://github.com/your-username/your-repo-name.git</developerConnection>
+        <tag>HEAD</tag>
+        <url>https://github.com/XcelevatorCharumathi/DevSecOps_Assignment.git</url>
+    </scm>
+
+    <properties>
 		<java.version>17</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
