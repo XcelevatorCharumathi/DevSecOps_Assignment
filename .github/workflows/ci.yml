@@ -32,7 +32,7 @@ jobs:
       - name: unit test
         run: mvn clean test
 
-      - name: integratio test
+      - name: integration test
         run: mvn clean verify
 
 
@@ -47,5 +47,14 @@ jobs:
         with:
           name: jacoco-coverage-report
           path: target/site/jacoco
+
+      - name: use secret
+        run:
+          echo "Username is ${{ secrets.SPRING_BOOT }}"
+        env:
+          DB_PASSWORD: ${{ secrets.SPRING_BOOT }}
+
+
+
 
 
