@@ -35,18 +35,16 @@ jobs:
       - name: integration test
         run: mvn clean verify
 
-
-
-      - name: compile and test
-        run: mvn clean test
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Upload Jacoco coverage report
         uses: actions/upload-artifact@v4
         with:
           name: jacoco-coverage-report
           path: target/site/jacoco
+
+      - name: deploying artifacts
+        run: mvn clean deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: use secrets
         run: |
